@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "AccShift",
+    "slug": "accshift",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#8a56ff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.accshift",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "AccShift cần quyền truy cập vị trí để cung cấp thông tin thời tiết chính xác cho khu vực của bạn.",
+        "NSLocationAlwaysUsageDescription": "AccShift cần quyền truy cập vị trí để cung cấp thông tin thời tiết chính xác cho khu vực của bạn.",
+        "NSCameraUsageDescription": "AccShift cần quyền truy cập camera để quét mã QR cho việc chấm công.",
+        "NSPhotoLibraryUsageDescription": "AccShift cần quyền truy cập thư viện ảnh để lưu và chia sẻ báo cáo.",
+        "NSFaceIDUsageDescription": "AccShift sử dụng Face ID để bảo vệ dữ liệu nhạy cảm của bạn.",
+        "UIBackgroundModes": ["fetch", "remote-notification"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#8a56ff"
+      },
+      "package": "com.yourcompany.accshift",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ],
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#8a56ff",
+          "sounds": ["./assets/notification-sound.wav"]
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "AccShift cần quyền truy cập vị trí để cung cấp thông tin thời tiết chính xác cho khu vực của bạn."
+        }
+      ],
+      "expo-secure-store",
+      "expo-crypto"
+    ],
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/your-project-id"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    }
+  }
+}
